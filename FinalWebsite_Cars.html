@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- SCRIPT TAG IS USE for CHANGING A DEFAULT FONT   -->
+  <script src="https://kit.fontawesome.com/a0e16d90ab.js" crossorigin="anonymous">
+  </script>
+
+  <title> Sakil Epic Cars Ltd.</title>
+</head>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    color: rgb(231, 111, 111);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+
+  .flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  /* CSS for CENTER PART OF NAVIGATION BAR */
+  .flex-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  /* CSS for NAVIGATION BAR */
+  #nav-bar {
+    background-color: blanchedalmond;
+    height: 45px;
+    width: 100vw;
+    /* vw= viewport width */
+    justify-content: space-between;
+    padding: 7px;
+    border-radius: 1px solid #909090;
+    position: fixed;
+    border-radius: 8px;
+
+  }
+
+  .left {
+    font-size: 25px;
+  }
+
+  /* ELEMENT OF CENTER PART of NAVIGATION BAR */
+  .center-element {
+    font-weight: bold;
+    color: #909090;
+    width: 145px;
+    display: inline;
+  }
+
+  /* HOVER EFFECT for a CENTER PART OF NAVIGATION BAR */
+  .center-element:hover {
+    /* color: #fff; */
+    color: black;
+  }
+
+  .right-element {
+    font-weight: bold;
+    color: #909090;
+    width: 145px;
+  }
+
+  .right-element:hover {
+    /* color: #fff; */
+    color: black;
+  }
+
+  .right-element i:hover {
+    /* color: #fff; */
+    color: black;
+  }
+
+  /* .intro img {
+    margin: 0px;
+    width: 1800px;
+  } */
+
+  /* yha tk  */
+
+  h1 {
+    color: rgb(54, 39, 69);
+    font-size: 70px;
+    padding-left: 35%;
+    align-content: center;
+  }
+
+  .trending_cars {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+  }
+
+  .product {
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    width: 26%;
+    margin: 30px;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 20px;
+    box-shadow: 0 14px 29px rgb(179, 161, 177);
+    transition: 0.4s;
+
+  }
+
+  .product:hover {
+    box-shadow: 0 3px 6px rgb(120, 108, 108);
+  }
+
+  .buy1 {
+    color: rgb(53, 39, 50);
+    font-size: 25px;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: #cd9b9b;
+    padding: 15px;
+  }
+
+  /* end wali image */
+
+  .end {
+    padding-bottom: 80px;
+    padding-top: 50px;
+  }
+
+  /* form ki styling  */
+  h3,
+  label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+
+  }
+
+  .txt {
+    border: 4px solid rgb(2, 1, 1);
+    border-radius: 12px;
+    padding: 6px 8px;
+    margin: 8px 2px;
+    color: rgb(17, 13, 13);
+  }
+
+  label {
+    display: flex;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 10px;
+  }
+
+  button {
+    display: block;
+    background-color: blue;
+    color: white;
+    padding: 12px 5px;
+    /* margin-top: 8px; */
+    width: 90px;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+
+  /* Climax Part of my website */
+  #climax {
+    background-image: url(./img/hero-bg.png);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+  }
+
+  #climax::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.7;
+    z-index: -1;
+  }
+
+  #climax .climax {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+  }
+
+  #climax h1 {
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal 0.5s ease forwards;
+    animation-delay: 1s;
+  }
+
+  #climax h1:nth-child(1) {
+    animation-delay: 1s;
+  }
+
+  #climax h1:nth-child(2) {
+    animation-delay: 2s;
+  }
+
+  #climax h1:nth-child(3) {
+    animation: text_reveal_name 0.5s ease forwards;
+    animation-delay: 3s;
+  }
+
+  #climax h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: crimson;
+    animation: text_reveal_box 1s ease;
+    animation-delay: 0.5s;
+  }
+
+  /* Ending of climax part */
+</style>
+
+<body>
+   <!-- Starting of navigation bar -->
+  <div id="nav-bar" class="flex-row">
+    <div class="left"> <i class="fa-brands fa-square-dribbble"></i> Sakil Epic Cars Ltd. </div>
+
+    <div class="center flex-row">
+      <div class="center-element"> <a href="newcars.html"> NEW CARS </a> </div>
+      <div class="center-element"> USED CARS </div>
+      <div class="center-element"> REVIEWS & NEWS </div>
+    </div>
+
+
+    <div class="right">
+      <!-- <div class="right-element"> <i class="fa-solid fa-magnifying-glass"></i> <input type="text" value=""
+          placeholder="Search"> </div> -->
+      <a href="Sign-In_Page.html">
+        <div class="right-element"> <button> SIGN IN</button> </div>
+      </a>
+    </div>
+  </div>
+  <br> <br> <br>
+     <!-- Ending of navigation bar -->
+
+  <!-- Climax Part of my website  -->
+  <section id="climax">
+    <div class="climax container">
+      <div>
+        <h1 align="center"> <a href=""> Hello, <br> This is <br> Sakil Cars Industry <br> Moto: Winning the Ride</a> </h1>
+      </div>
+    </div>
+  </section>
+  <!-- Ending of climax part   -->
+    <br>
+ 
+  <!-- Yahan se shuru hai product se pehle ka division -->
+  <div class="intro">
+    <!-- <img src="ban.jpg" alt=""> -->
+
+    <H1 align="center"> <button style="width: 200px;"> TRENDING CARS </button> </H1>
+    <div class="trending_cars">
+      <!-- Starting of Products sections -->
+      <div class="product">
+        <img src="pexels-mike-b-1009861.jpg" alt="" style="width: 380px;" height="480px"> <br>
+        <h2> White Mercedes-benz Car <br> PRICE: ₹ 41.99 Lakh</h2>
+        <button class="buy1"> Buy Now </button>
+      </div>
+
+      <div class="product">
+        <img src="pexels-mike-b-170811.jpg" alt="" style="width: 380px;" height="480px"> <br>
+        <h2> Blue Bmw Sedan <br> PRICE: ₹ 54.69 - 61.48 Lakh</h2>
+        <button class="buy1"> Buy Now </button>
+      </div>
+
+      <div class="product">
+        <img src="pexels-borta-14554495.jpg" alt="" style="width: 380px;" height="480px"><br>
+        <h2> White Volkswagen Vento Car <br> PRICE: Rs.10.74 Lakh</h2>
+        <button class="buy1"> Buy Now</button>
+      </div>
+      <br> <br>
+
+      <div class="product">
+        <img src="audi-rs5.jpg" alt="" style="width: 380px;" height="480px"> <br>
+        <h2> Audi RS5 Car <br> PRICE: ₹ 1.11 crores</h2>
+        <button class="buy1"> Buy Now </button>
+      </div>
+
+      <div class="product">
+        <img src="1ford-mustang.jpg" alt="" style="width: 380px;" height="480px"> <br>
+        <h2> Ford Mustang <br> PRICE: ₹ 74.61 lakhs</h2>
+        <button class="buy1"> Buy Now </button>
+      </div>
+
+      <div class="product">
+        <img src="jaguar-f-type.jpg" alt="" style="width: 380px;" height="480px"><br>
+        <h2> Jaguar F-TYPE Car <br> PRICE: ₹ 95.11 - ₹ 2.53 Crores </h2>
+        <button class="buy1"> Buy Now</button>
+      </div>
+      <br> <br> <br> <br> <br> <br>
+      <!-- Ends of products sections -->
+
+      <div style="margin-top: 40px;">
+        <h3 align="center" style="font-size: 50px; font-style: oblique;"> Why SakilCars.html? </h3>
+        <p align="center" style="font-size: 30px;"> SakilCars.html has an award-winning brand, leadership team, and the
+          best <br> and brightest
+          employees in the industry. We've been featured as one of <br> the top places to work by The India Tribune,
+          Built In India and India
+          <br> Innovation. Together, we are uniting media, solutions and data to <br> drive efficiency for consumers,
+          dealer customers and
+          major <br> automotive manufacturers.
+        </p>
+
+      </div>
+      <br> <br> <br> <br> <br> <br>
+
+      <!-- Starting of About Us -->
+      <div style="margin-top: 10px;">
+        <h3 align="center" style="font-size: 50px; font-style: oblique;"> About Us </h3>
+        <h3 align="center" style="font-size: 45px;"> Car Industry</h3>
+        <p align="center" style="font-size: 30px;">Sakil Cars Industry is a leading digital marketplace and solutions
+          provider for the
+          automotive <br> industry that connects car shoppers with sellers. Launched in 2025 and headquartered in <br>
+          India, the Company
+          empowers shoppers with the data, resources and digital tools <br> needed to make informed buying decisions and
+          seamlessly connect with
+          <br> automotive retailers. <br> <br> <a href=""> <button style="width: 180px;" height="25px"> Download Our App </button> </a> </p>
+          <br> <br> <br>
+      <!-- Ending of of About Us -->
+
+      <!-- Showing some Gratitude -->
+        <h3 align="center" style="font-size: 50px; font-style: oblique;"> THANK YOU FOR YOUR VISIT </h3>
+      </div>
+
+</body>
+
+</html>
